@@ -1,0 +1,169 @@
+:root {
+  /* === Colors === */
+  --primary-clr-light: hsl(185, 75%, 39%);
+  --primary-clr-dark: hsl(229, 23%, 23%);
+  --primary-clr-accent: hsl(227, 10%, 46%);
+  --neutral-clr: hsl(0, 0%, 59%);
+
+  /* === Font === */
+  --body-ff: "Kumbh Sans", sans-serif;
+  --body-fs: 18px;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: var(--body-ff);
+  font-size: var(--body-fs);
+  background-color: var(--primary-clr-light);
+  /* position: relative; */
+}
+
+.wrapper {
+  max-width: 900px;
+  padding: 10em 1em;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+/* === Header === */
+.header {
+  position: relative;
+  /* width: 400px; */
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 1px 1px 25px hsl(227, 10%, 46%);
+}
+
+.header__top {
+  height: 30%;
+}
+
+.header__top img {
+  height: 100%;
+}
+
+.header__img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20%;
+  left: 33%;
+  border: 5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* === Profile Info === */
+.profile__info {
+  text-align: center;
+  position: relative;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  line-height: 0.8;
+  color: var(--primary-clr-dark);
+}
+
+.profile__info::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--neutral-clr);
+}
+
+.profile__info span {
+  color: var(--neutral-clr);
+  font-weight: 400;
+}
+
+/* === Profile social count === */
+.profile__social-count {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+  padding-top: 2em;
+  text-align: center;
+  line-height: 0.1;
+  color: var(--primary-clr-dark);
+}
+
+.profile__social-count p {
+  color: var(--primary-clr-accent);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.profile__social-count h4 {
+  font-weight: 700;
+}
+
+/* === Background Image === */
+.bg__pattern-top {
+  position: absolute;
+  z-index: -99;
+  top: -500px;
+  left: -300px;
+}
+
+.bg__pattern-bottom {
+  position: absolute;
+  z-index: -99;
+  bottom: -750px;
+  right: -200px;
+  /* max-width: 500px; */
+  overflow: hidden;
+}
+/* 
+.bg__pattern-bottom img {
+  width: 400px;
+} */
+
+@media screen and (max-width: 375px) {
+  /* === Header === */
+  .wrapper {
+    /* position: relative; */
+    width: 700px;
+    padding-right: 5rem;
+    margin: 0 auto;
+  }
+
+  /* === Background Image === */
+  .bg__pattern-top {
+    left: -750px;
+    top: -500px;
+  }
+
+  .bg__pattern-bottom {
+    right: -750px;
+    bottom: -800px;
+  }
+}
